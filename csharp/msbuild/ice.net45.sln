@@ -37,11 +37,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "icelocatordiscovery", "..\s
 		{7CB4715E-DD8B-48F8-B478-27B8BD4008C7} = {7CB4715E-DD8B-48F8-B478-27B8BD4008C7}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "icepatch2", "..\src\IcePatch2\msbuild\net45\icepatch2.csproj", "{6479EE9D-5730-44BC-B564-97211E1B54C5}"
-	ProjectSection(ProjectDependencies) = postProject
-		{7CB4715E-DD8B-48F8-B478-27B8BD4008C7} = {7CB4715E-DD8B-48F8-B478-27B8BD4008C7}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "icessl", "..\src\IceSSL\msbuild\net45\icessl.csproj", "{B763DADE-440B-46BC-9CC0-BF0CF9D43182}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7CB4715E-DD8B-48F8-B478-27B8BD4008C7} = {7CB4715E-DD8B-48F8-B478-27B8BD4008C7}
@@ -116,14 +111,6 @@ Global
 		{8D8AA726-3A35-407B-BD38-BEA828EEE727}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D8AA726-3A35-407B-BD38-BEA828EEE727}.Release-Managed|Any CPU.ActiveCfg = Release|Any CPU
 		{8D8AA726-3A35-407B-BD38-BEA828EEE727}.Release-Managed|Any CPU.Build.0 = Release|Any CPU
-		{6479EE9D-5730-44BC-B564-97211E1B54C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6479EE9D-5730-44BC-B564-97211E1B54C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6479EE9D-5730-44BC-B564-97211E1B54C5}.Debug-Managed|Any CPU.ActiveCfg = Debug|Any CPU
-		{6479EE9D-5730-44BC-B564-97211E1B54C5}.Debug-Managed|Any CPU.Build.0 = Debug|Any CPU
-		{6479EE9D-5730-44BC-B564-97211E1B54C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6479EE9D-5730-44BC-B564-97211E1B54C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6479EE9D-5730-44BC-B564-97211E1B54C5}.Release-Managed|Any CPU.ActiveCfg = Release|Any CPU
-		{6479EE9D-5730-44BC-B564-97211E1B54C5}.Release-Managed|Any CPU.Build.0 = Release|Any CPU
 		{B763DADE-440B-46BC-9CC0-BF0CF9D43182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B763DADE-440B-46BC-9CC0-BF0CF9D43182}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B763DADE-440B-46BC-9CC0-BF0CF9D43182}.Debug-Managed|Any CPU.ActiveCfg = Debug|Any CPU

@@ -3,16 +3,20 @@
 This page describes how to build and install Ice for Java from source. If
 you prefer, you can also download a [binary distribution][1].
 
-* [Build Requirements](#build-requirements)
-  * [Operating Systems](#operating-systems)
-  * [Slice to Java Compiler](#slice-to-java-compiler)
-  * [Java Version](#java-version)
-  * [Gradle](#gradle)
-  * [Bzip2 Compression](#bzip2-compression)
-* [Building Ice for Java Compat](#building-ice-for-java-compat-1)
-* [Installing Ice for Java Compat](#installing-ice-for-java-compat)
-* [Running the Java Compat Tests](#running-the-java-compat-tests)
-* [Building the Ice for Android Tests](#building-the-ice-for-android-tests)
+- [Building Ice for Java Compat](#building-ice-for-java-compat)
+  - [Build Requirements](#build-requirements)
+    - [Operating Systems](#operating-systems)
+    - [Slice to Java Compiler](#slice-to-java-compiler)
+    - [Java Version](#java-version)
+    - [Gradle](#gradle)
+    - [Bzip2 Compression](#bzip2-compression)
+  - [Building Ice for Java](#building-ice-for-java)
+  - [Installing Ice for Java](#installing-ice-for-java)
+  - [Running the Java Tests](#running-the-java-tests)
+  - [Building the Ice for Android Tests](#building-the-ice-for-android-tests)
+    - [Build Requirements](#build-requirements-1)
+    - [Building the Android Test Controller](#building-the-android-test-controller)
+  - [Running the Android Tests](#running-the-android-tests)
 
 ## Build Requirements
 
@@ -131,7 +135,6 @@ icebt-compat-3.7.5.jar
 icediscovery-compat-3.7.5.jar
 icegrid-compat-3.7.5.jar
 icelocatordiscovery-compat-3.7.5.jar
-icepatch2-compat-3.7.5.jar
 icestorm-compat-3.7.5.jar
 ```
 

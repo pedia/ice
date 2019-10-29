@@ -99,11 +99,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "icelocatordiscovery", "..\s
 		{6485EC94-6B47-428D-B42D-AAA11F08DB59} = {6485EC94-6B47-428D-B42D-AAA11F08DB59}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "icepatch2", "..\src\IcePatch2Lib\msbuild\icepatch2.vcxproj", "{994ADD25-20A0-4715-A3EC-9F86AFD481D0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6485EC94-6B47-428D-B42D-AAA11F08DB59} = {6485EC94-6B47-428D-B42D-AAA11F08DB59}
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "slice2matlab", "..\src\slice2matlab\msbuild\slice2matlab.vcxproj", "{FBDCD48E-57DB-4CC1-A9D6-7D9F1C97D0E1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "slice2swift", "..\src\slice2swift\msbuild\slice2swift.vcxproj", "{8D237BBB-506A-4CC1-8C81-BDC2787DA88B}"
@@ -284,14 +279,6 @@ Global
 		{5A8CEAB6-9F57-495C-B554-F93F842A0A28}.Release|Win32.Build.0 = Release|Win32
 		{5A8CEAB6-9F57-495C-B554-F93F842A0A28}.Release|x64.ActiveCfg = Release|x64
 		{5A8CEAB6-9F57-495C-B554-F93F842A0A28}.Release|x64.Build.0 = Release|x64
-		{994ADD25-20A0-4715-A3EC-9F86AFD481D0}.Debug|Win32.ActiveCfg = Debug|Win32
-		{994ADD25-20A0-4715-A3EC-9F86AFD481D0}.Debug|Win32.Build.0 = Debug|Win32
-		{994ADD25-20A0-4715-A3EC-9F86AFD481D0}.Debug|x64.ActiveCfg = Debug|x64
-		{994ADD25-20A0-4715-A3EC-9F86AFD481D0}.Debug|x64.Build.0 = Debug|x64
-		{994ADD25-20A0-4715-A3EC-9F86AFD481D0}.Release|Win32.ActiveCfg = Release|Win32
-		{994ADD25-20A0-4715-A3EC-9F86AFD481D0}.Release|Win32.Build.0 = Release|Win32
-		{994ADD25-20A0-4715-A3EC-9F86AFD481D0}.Release|x64.ActiveCfg = Release|x64
-		{994ADD25-20A0-4715-A3EC-9F86AFD481D0}.Release|x64.Build.0 = Release|x64
 		{FBDCD48E-57DB-4CC1-A9D6-7D9F1C97D0E1}.Debug|Win32.ActiveCfg = Debug|Win32
 		{FBDCD48E-57DB-4CC1-A9D6-7D9F1C97D0E1}.Debug|Win32.Build.0 = Debug|Win32
 		{FBDCD48E-57DB-4CC1-A9D6-7D9F1C97D0E1}.Debug|x64.ActiveCfg = Debug|x64
