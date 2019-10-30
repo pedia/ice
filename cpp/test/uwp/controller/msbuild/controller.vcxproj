@@ -394,12 +394,6 @@
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\x64\Debug\Ice_binding_server.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
     </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\x64\Debug\Ice_checksum_client.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\x64\Debug\Ice_checksum_server.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-    </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\x64\Debug\Ice_custom_client.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
     </None>
@@ -652,12 +646,6 @@
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
     </None>
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\x64\Release\Ice_binding_server.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\x64\Release\Ice_checksum_client.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\x64\Release\Ice_checksum_server.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
     </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\x64\Release\Ice_custom_client.dll">
@@ -914,12 +902,6 @@
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\Win32\Release\Ice_binding_server.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
     </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\Win32\Release\Ice_checksum_client.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\Win32\Release\Ice_checksum_server.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
-    </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\Win32\Release\Ice_custom_client.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
     </None>
@@ -1172,12 +1154,6 @@
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
     </None>
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\Win32\Debug\Ice_binding_server.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\Win32\Debug\Ice_checksum_client.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\Win32\Debug\Ice_checksum_server.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
     </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\Win32\Debug\Ice_custom_client.dll">
@@ -1434,12 +1410,6 @@
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\ARM\Debug\Ice_binding_server.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
     </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\ARM\Debug\Ice_checksum_client.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\ARM\Debug\Ice_checksum_server.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
-    </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\ARM\Debug\Ice_custom_client.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
     </None>
@@ -1692,12 +1662,6 @@
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
     </None>
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\ARM\Release\Ice_binding_server.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\ARM\Release\Ice_checksum_client.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\ARM\Release\Ice_checksum_server.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</DeploymentContent>
     </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\ARM\Release\Ice_custom_client.dll">

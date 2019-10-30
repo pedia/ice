@@ -283,7 +283,6 @@
 		2F1FFADAC530E6B05E3A2BB5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0075088BD497CEE1D89780 /* Client.swift */; };
 		2F2C3FB2F72794F86AD04730 /* Util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E69875C244C5778EEC372 /* Util.cpp */; };
 		2FCF5F07732A56A488FC30C7 /* Test.ice in Sources */ = {isa = PBXBuildFile; fileRef = EB489D1E2A8C2CF17A2F4330 /* Test.ice */; };
-		2FDD95D76E0A825FD90787B5 /* SliceChecksumDict.ice in Sources */ = {isa = PBXBuildFile; fileRef = C784636985C065D20545F5BE /* SliceChecksumDict.ice */; };
 		2FE6B761F66C7B1B09DF0012 /* IceDiscovery.ice in Sources */ = {isa = PBXBuildFile; fileRef = B7D8B9A2D605FCFFC786AD11 /* IceDiscovery.ice */; };
 		2FED9BFFE890ED8FE1563F6A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9D0420245199FB5BBD345 /* Client.swift */; };
 		302053A6F0E67A56D6B48E48 /* TestCommon.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 2033BDC3AF58A54C9EF1698B /* TestCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -464,7 +463,6 @@
 		4EFFB2A6C07DDDD71FC61D62 /* Locator.ice in Sources */ = {isa = PBXBuildFile; fileRef = 3EE292939C43A0B9A8B787D7 /* Locator.ice */; };
 		5027C663A9B52FEE73B1CFEA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507C0145EE5B124FE90FA6E /* Client.swift */; };
 		502F2C1998C22A5A96CFA8F3 /* LocatorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8565E6799EC944D42F00DB9 /* LocatorInfo.cpp */; };
-		503BF71A9FB17136AD834A30 /* SliceChecksumDict.ice in Sources */ = {isa = PBXBuildFile; fileRef = C784636985C065D20545F5BE /* SliceChecksumDict.ice */; };
 		503C9110692E2CF296B51180 /* RequestHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAEA1C49B0E4F1F69EF841 /* RequestHandler.cpp */; };
 		508F3B86F0B341FC6C813968 /* InputStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6CDAB227924D0610F81AD01 /* InputStream.cpp */; };
 		50A2464D8179FA635F349213 /* IceOptionalAMD.bundle in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C6AE8BE95F80EBF3D2C290AE /* IceOptionalAMD.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -758,12 +756,10 @@
 		82910A79F1F8A522A8FA8A19 /* ProcessF.ice in Sources */ = {isa = PBXBuildFile; fileRef = C35F0E57B69EDEFC5E944EBC /* ProcessF.ice */; };
 		8297502A78B247BBE4DBA6A9 /* WSConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B240838C3B7EC5098985F9A /* WSConnector.cpp */; };
 		82C6A3FB169AACDACF4F7B87 /* PluginF.ice in Sources */ = {isa = PBXBuildFile; fileRef = 059160A9429AADF7083C704C /* PluginF.ice */; };
-		82D152396ABCFB797FC8088F /* SliceChecksums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DDFA593815E37A8E3222D63E /* SliceChecksums.cpp */; };
 		83542F5C0006AA10DEECA43F /* RouterF.ice in Sources */ = {isa = PBXBuildFile; fileRef = 450AD776C8151E42914041A8 /* RouterF.ice */; };
 		8366C667CA0C68F21BBE67BC /* TestAMD.ice in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E877ACC0DA38CB700CA31 /* TestAMD.ice */; };
 		839B56DE7B4182BF0AD32EF1 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5312EB0C18E1592B61C470D3 /* PromiseKit.framework */; };
 		83ADE2EF029A457A440D043B /* OutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AF1143034F0C3447D52DC6 /* OutputStream.swift */; };
-		844DE08FE4B28A8FB37C760A /* SliceChecksumDict.ice in Sources */ = {isa = PBXBuildFile; fileRef = C784636985C065D20545F5BE /* SliceChecksumDict.ice */; };
 		8474A2C5AB5774475C3AD559 /* Transceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BE6BACEC2F33E91F4B617FB /* Transceiver.cpp */; };
 		84A6A3703564A713960A8776 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FBC76F9EB72AA7D657AD6A /* Client.swift */; };
 		84A7D6632D970C65E0985C67 /* Ice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630B53C4B0DCBF443CE3A899 /* Ice.framework */; };
@@ -839,7 +835,6 @@
 		8F766BFE82FA086DF9C859ED /* ServerAMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4DA6E69B6D870D4106D05D /* ServerAMD.swift */; };
 		8FEF0E2B30301C6E07917CAF /* PluginI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8223AEBF7050FD7541E96A1 /* PluginI.cpp */; };
 		8FFE205C24EF896369109535 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A6842456B978F70B5DFDD /* Client.swift */; };
-		902E1BB2B659564E9A23152C /* SliceChecksums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DDFA593815E37A8E3222D63E /* SliceChecksums.cpp */; };
 		903BED45E35CB747537258C8 /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3211C9FB66D58C1BDB91C18 /* Network.cpp */; };
 		90778C6C17F29D68671DF2BA /* WSEndpoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47A28B22A642C985FFB853F7 /* WSEndpoint.cpp */; };
 		90D27EB960C1DFF768C002E0 /* SlicedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D6AD5F74CE6D55E945CE35 /* SlicedData.swift */; };
@@ -1453,7 +1448,6 @@
 		F98B452B5D6D4D7BD3813985 /* IceExceptionsAMD.bundle in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4E959F0B362795EC27EE97FA /* IceExceptionsAMD.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F9CCEA8BB585C6CDF67F1FB5 /* Instance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A50EFAADF3111E3694A86697 /* Instance.cpp */; };
 		F9D785E1575E2236A2C69E22 /* Test.ice in Sources */ = {isa = PBXBuildFile; fileRef = 89D2FAA92C70159399181D22 /* Test.ice */; };
-		FA026E17099CDC282180A0C5 /* SliceChecksumDict.ice in Sources */ = {isa = PBXBuildFile; fileRef = C784636985C065D20545F5BE /* SliceChecksumDict.ice */; };
 		FA2D34D2970117BE5702DEED /* ServerAMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698F636B1C7F71C0D86FCEE2 /* ServerAMD.swift */; };
 		FA31B49A6063A7E1B097FD6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6F3EFDA8ACA3B1AF262A50 /* Cocoa.framework */; };
 		FA405E6DFF25B85F1653371E /* libIceLocatorDiscovery C++11 macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B61A6FA40AFB5C32FEAA154 /* libIceLocatorDiscovery C++11 macOS.a */; };
@@ -1560,7 +1554,6 @@
 				"$SRCROOT/../slice/Ice/RouterF.ice",
 				"$SRCROOT/../slice/Ice/ServantLocator.ice",
 				"$SRCROOT/../slice/Ice/ServantLocatorF.ice",
-				"$SRCROOT/../slice/Ice/SliceChecksumDict.ice",
 				"$SRCROOT/../slice/Ice/ValueFactory.ice",
 				"$SRCROOT/../slice/Ice/Version.ice",
 			);
@@ -1744,7 +1737,6 @@
 				"$SRCROOT/../slice/Ice/RouterF.ice",
 				"$SRCROOT/../slice/Ice/ServantLocator.ice",
 				"$SRCROOT/../slice/Ice/ServantLocatorF.ice",
-				"$SRCROOT/../slice/Ice/SliceChecksumDict.ice",
 				"$SRCROOT/../slice/Ice/ValueFactory.ice",
 				"$SRCROOT/../slice/Ice/Version.ice",
 			);
@@ -2162,7 +2154,6 @@
 				"$SRCROOT/../slice/Ice/RouterF.ice",
 				"$SRCROOT/../slice/Ice/ServantLocator.ice",
 				"$SRCROOT/../slice/Ice/ServantLocatorF.ice",
-				"$SRCROOT/../slice/Ice/SliceChecksumDict.ice",
 				"$SRCROOT/../slice/Ice/ValueFactory.ice",
 				"$SRCROOT/../slice/Ice/Version.ice",
 			);
@@ -2696,7 +2687,6 @@
 				"$SRCROOT/../slice/Ice/RouterF.ice",
 				"$SRCROOT/../slice/Ice/ServantLocator.ice",
 				"$SRCROOT/../slice/Ice/ServantLocatorF.ice",
-				"$SRCROOT/../slice/Ice/SliceChecksumDict.ice",
 				"$SRCROOT/../slice/Ice/ValueFactory.ice",
 				"$SRCROOT/../slice/Ice/Version.ice",
 			);
@@ -4738,7 +4728,6 @@
 		C6AE8BE95F80EBF3D2C290AE /* IceOptionalAMD.bundle */ = {isa = PBXFileReference; explicitFileType = "wrapper.plug-in"; includeInIndex = 0; path = IceOptionalAMD.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C69B957051A399B8A8D080 /* BatchRequestQueue.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = BatchRequestQueue.cpp; path = ../cpp/src/Ice/BatchRequestQueue.cpp; sourceTree = "<group>"; };
 		C6FBE40672797298F2C1C21A /* IceLocatorDiscovery.ice */ = {isa = PBXFileReference; includeInIndex = 1; name = IceLocatorDiscovery.ice; path = ../slice/IceLocatorDiscovery/IceLocatorDiscovery.ice; sourceTree = "<group>"; };
-		C784636985C065D20545F5BE /* SliceChecksumDict.ice */ = {isa = PBXFileReference; includeInIndex = 1; name = SliceChecksumDict.ice; path = ../slice/Ice/SliceChecksumDict.ice; sourceTree = "<group>"; };
 		C7F15D84385C6FFC6EADD1FA /* IceInterceptor.bundle */ = {isa = PBXFileReference; explicitFileType = "wrapper.plug-in"; includeInIndex = 0; path = IceInterceptor.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84F7EAC0F5791E7D09AB072 /* PropertiesAdmin.ice */ = {isa = PBXFileReference; includeInIndex = 1; name = PropertiesAdmin.ice; path = ../slice/Ice/PropertiesAdmin.ice; sourceTree = "<group>"; };
 		C8C4EC7F377638ACA3789243 /* ConnectRequestHandler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ConnectRequestHandler.cpp; path = ../cpp/src/Ice/ConnectRequestHandler.cpp; sourceTree = "<group>"; };
@@ -4787,7 +4776,6 @@
 		DD068D7CC10CB319EE39A71B /* CommunicatorI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommunicatorI.swift; path = src/Ice/CommunicatorI.swift; sourceTree = "<group>"; };
 		DDB4DD346430D46FA6ECB82A /* ThreadPool.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadPool.cpp; path = ../cpp/src/Ice/ThreadPool.cpp; sourceTree = "<group>"; };
 		DDC3D4E5B05D9FD2F3E929F5 /* ServerAMD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerAMD.swift; path = test/Ice/proxy/ServerAMD.swift; sourceTree = "<group>"; };
-		DDFA593815E37A8E3222D63E /* SliceChecksums.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = SliceChecksums.cpp; path = ../cpp/src/Ice/SliceChecksums.cpp; sourceTree = "<group>"; };
 		DDFDD649342AB148C5437BA5 /* RequestHandlerFactory.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = RequestHandlerFactory.cpp; path = ../cpp/src/Ice/RequestHandlerFactory.cpp; sourceTree = "<group>"; };
 		DE3C76073BBDB3D3E0B943F0 /* AllTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllTests.swift; path = test/Ice/operations/AllTests.swift; sourceTree = "<group>"; };
 		DEB369D710EC587DFD76B069 /* IceSlicingObjects.bundle */ = {isa = PBXFileReference; explicitFileType = "wrapper.plug-in"; includeInIndex = 0; path = IceSlicingObjects.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6752,7 +6740,6 @@
 				FB081EA6CBA368AB96ED96D6 /* ServantManager.cpp */,
 				18D84E7BFF897CD18E15CC92 /* Service.cpp */,
 				34FBA26DDA9D52224A61F465 /* SHA1.cpp */,
-				DDFA593815E37A8E3222D63E /* SliceChecksums.cpp */,
 				AD045F681FB9F088DC230E0F /* SlicedData.cpp */,
 				931F3380F15851A31DB21B98 /* StreamSocket.cpp */,
 				5E338C63E5506C4DD6F7B043 /* StringConverterPlugin.cpp */,
@@ -6866,7 +6853,6 @@
 				A8F736DDD2D36B64200A0023 /* RouterF.ice */,
 				2AC0FE6725FBB1C2DC5A9E78 /* ServantLocator.ice */,
 				9800A938F2930FC734B98F4D /* ServantLocatorF.ice */,
-				C784636985C065D20545F5BE /* SliceChecksumDict.ice */,
 				57017F902B7686C7579A7648 /* ValueFactory.ice */,
 				7603D7C27853E868765956CA /* Version.ice */,
 			);
@@ -12888,8 +12874,6 @@
 				5D965A97A2EAAA609263185F /* Service.cpp in Sources */,
 				7042388A0D63FE6DCDA9F654 /* SHA1.cpp in Sources */,
 				023484FAB909A9605F3269E7 /* Shared.cpp in Sources */,
-				FA026E17099CDC282180A0C5 /* SliceChecksumDict.ice in Sources */,
-				902E1BB2B659564E9A23152C /* SliceChecksums.cpp in Sources */,
 				DABE421785EC682E72B955E2 /* SlicedData.cpp in Sources */,
 				D643A1F482314700C36462E8 /* StreamSocket.cpp in Sources */,
 				E75CE1821F422A6D62359914 /* StringConverter.cpp in Sources */,
@@ -13089,7 +13073,6 @@
 				3CC13D43A7B2E44BAE751500 /* ServantLocator.ice in Sources */,
 				B3437BA13D399428737F1B65 /* ServantLocatorF.ice in Sources */,
 				4CF2C72A53852238F87D4908 /* ServantManager.swift in Sources */,
-				2FDD95D76E0A825FD90787B5 /* SliceChecksumDict.ice in Sources */,
 				90D27EB960C1DFF768C002E0 /* SlicedData.swift in Sources */,
 				39B5700E0EEECD0915EDDE7F /* SliceFlags.swift in Sources */,
 				8A18CD852FA002B4E62CC507 /* SliceInfo.swift in Sources */,
@@ -13367,7 +13350,6 @@
 				9288123451FE48CDD5B8A16A /* ServantLocator.ice in Sources */,
 				5A9F355C9A7982F4699B7221 /* ServantLocatorF.ice in Sources */,
 				E79E897842121850A5AD1E50 /* ServantManager.swift in Sources */,
-				844DE08FE4B28A8FB37C760A /* SliceChecksumDict.ice in Sources */,
 				22CEF1922E8EE385E1E3AE0B /* SlicedData.swift in Sources */,
 				5EF420F64CC50E2E86014ED1 /* SliceFlags.swift in Sources */,
 				806C749DC081459438AE7721 /* SliceInfo.swift in Sources */,
@@ -13540,8 +13522,6 @@
 				2991CC0127921A6738E5F6C1 /* Service.cpp in Sources */,
 				D22A66BE3743E0AAAAB7C581 /* SHA1.cpp in Sources */,
 				CD11B5459E9E30DB90A56F7A /* Shared.cpp in Sources */,
-				503BF71A9FB17136AD834A30 /* SliceChecksumDict.ice in Sources */,
-				82D152396ABCFB797FC8088F /* SliceChecksums.cpp in Sources */,
 				652209819ABB9C4CD7978770 /* SlicedData.cpp in Sources */,
 				BBFE75E0B1B9B5E2433EDF61 /* StreamAcceptor.cpp in Sources */,
 				521AA491E0F12631E6B313F9 /* StreamConnector.cpp in Sources */,

@@ -266,12 +266,6 @@
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\x64\Debug\Ice_binding_server.dll">
       <Filter>Tests\x64\Debug</Filter>
     </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\x64\Debug\Ice_checksum_client.dll">
-      <Filter>Tests\x64\Debug</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\x64\Debug\Ice_checksum_server.dll">
-      <Filter>Tests\x64\Debug</Filter>
-    </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\x64\Debug\Ice_custom_client.dll">
       <Filter>Tests\x64\Debug</Filter>
     </None>
@@ -522,12 +516,6 @@
       <Filter>Tests\x64\Release</Filter>
     </None>
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\x64\Release\Ice_binding_server.dll">
-      <Filter>Tests\x64\Release</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\x64\Release\Ice_checksum_client.dll">
-      <Filter>Tests\x64\Release</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\x64\Release\Ice_checksum_server.dll">
       <Filter>Tests\x64\Release</Filter>
     </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\x64\Release\Ice_custom_client.dll">
@@ -782,12 +770,6 @@
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\Win32\Release\Ice_binding_server.dll">
       <Filter>Tests\Win32\Release</Filter>
     </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\Win32\Release\Ice_checksum_client.dll">
-      <Filter>Tests\Win32\Release</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\Win32\Release\Ice_checksum_server.dll">
-      <Filter>Tests\Win32\Release</Filter>
-    </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\Win32\Release\Ice_custom_client.dll">
       <Filter>Tests\Win32\Release</Filter>
     </None>
@@ -1038,12 +1020,6 @@
       <Filter>Tests\Win32\Debug</Filter>
     </None>
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\Win32\Debug\Ice_binding_server.dll">
-      <Filter>Tests\Win32\Debug</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\Win32\Debug\Ice_checksum_client.dll">
-      <Filter>Tests\Win32\Debug</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\Win32\Debug\Ice_checksum_server.dll">
       <Filter>Tests\Win32\Debug</Filter>
     </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\Win32\Debug\Ice_custom_client.dll">
@@ -1298,12 +1274,6 @@
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\ARM\Debug\Ice_binding_server.dll">
       <Filter>Tests\ARM\Debug</Filter>
     </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\ARM\Debug\Ice_checksum_client.dll">
-      <Filter>Tests\ARM\Debug</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\ARM\Debug\Ice_checksum_server.dll">
-      <Filter>Tests\ARM\Debug</Filter>
-    </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\ARM\Debug\Ice_custom_client.dll">
       <Filter>Tests\ARM\Debug</Filter>
     </None>
@@ -1554,12 +1524,6 @@
       <Filter>Tests\ARM\Release</Filter>
     </None>
     <None Include="..\..\..\Ice\binding\msbuild\uwp\server\ARM\Release\Ice_binding_server.dll">
-      <Filter>Tests\ARM\Release</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\client\ARM\Release\Ice_checksum_client.dll">
-      <Filter>Tests\ARM\Release</Filter>
-    </None>
-    <None Include="..\..\..\Ice\checksum\msbuild\uwp\server\ARM\Release\Ice_checksum_server.dll">
       <Filter>Tests\ARM\Release</Filter>
     </None>
     <None Include="..\..\..\Ice\custom\msbuild\uwp\client\ARM\Release\Ice_custom_client.dll">
