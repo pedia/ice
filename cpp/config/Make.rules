@@ -42,7 +42,10 @@ endif
 # that are static-only
 #
 shared_projects         = %
-shared_excludes         = IceUtil Slice
+shared_excludes         = IceUtil Slice \
+                          icebridge \
+                          test/Glacier2/% \
+                          test/IceBridge/%
 
 #
 # Build only few components with the static configuration (core and stubs)
