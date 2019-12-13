@@ -105,7 +105,6 @@ set_target_properties(ice-shared
                       LIBRARY_OUTPUT_DIRECTORY
                       ${icecpp_dir}/gradle/lib/shared/${CMAKE_BUILD_TYPE}/${ANDROID_ABI})
 
-
 set_target_properties(ice-shared
                       PROPERTIES
                       LIBRARY_OUTPUT_NAME

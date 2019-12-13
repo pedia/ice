@@ -299,4 +299,3 @@ Java_com_zeroc_testcontrollercpp_ControllerApp_00024ControllerHelperI_waitSucces
 {
     return reinterpret_cast<ControllerHelperI*>(helper)->waitSuccess(env, timeout);
 }
-
