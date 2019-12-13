@@ -11,7 +11,7 @@ and cmake installed. We tested with the following components:
 - Android Studio 3.5
 - Android SDK 29
 
-Using Ice's Java mapping with Java 8 requires at minimum API level 24:
+Ice for C++ for the Android NDK requires at minimum API level 24:
 
 - Android 7 (API24)
 
@@ -33,8 +33,9 @@ set ICE_BIN_DIST=cpp
 set ICE_HOME=C:\Program Files\ZeroC\Ice-3.7.3
 ```
 
-Before building Ice for Java, review the settings in the file
-`gradle.properties` and edit as necessary.
+Before building Ice for C++, review the settings in the file `gradle.properties`
+and edit as necessary. Set `ANDROID_SDK_ROOT` to the path of your Android SDK
+installation.
 
 To build Ice for C++ libraries, run
 ```
@@ -43,7 +44,7 @@ gradlew build
 
 Upon completion, the Ice libraries are placed in the `lib` subdirectory. The
 build static and shared libraries in debug and release mode for each Android
-supported ABI (x86, x86_64, armeabi-v7a, arm64-v8a).
+supported ABI (`x86`, `x86_64`, `armeabi-v7a`, `arm64-v8a`).
 
 If at any time you wish to discard the current build and start a new one, use
 these commands:
@@ -64,7 +65,7 @@ follow these steps:
 
 1. Start Android Studio
 2. Select "Open an existing Android Studio project"
-3. Navigate to and select the "java/test/android/controller" subdirectory
+3. Navigate to and select the "cpp/test/android/controller" subdirectory
 4. Click OK and wait for the project to open and build
 
 ### Running the Android Test Suite
