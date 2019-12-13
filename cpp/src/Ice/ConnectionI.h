@@ -38,7 +38,7 @@
 
 #include <deque>
 
-#if !defined(ICE_OS_UWP)
+#if !defined(ICE_OS_UWP) && !defined(__ANDROID__)
 #    ifndef ICE_HAS_BZIP2
 #        define ICE_HAS_BZIP2
 #    endif

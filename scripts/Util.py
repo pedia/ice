@@ -3100,7 +3100,7 @@ class Driver:
     def getProcessProps(self, current, ready, readyCount):
         props = {}
         if ready or readyCount > 0:
-            if current.config.buildPlatform not in ["iphonesimulator", "iphoneos"]:
+            if current.config.buildPlatform not in ["iphonesimulator", "iphoneos"] and not current.config.android:
                 props["Ice.PrintAdapterReady"] = 1
         return props
 
@@ -3249,6 +3249,13 @@ class CppMapping(Mapping):
         path = os.path.join(path, "build-{0}-{1}".format(current.config.buildPlatform, current.config.buildConfig))
         build = "Debug" if os.path.exists(os.path.join(path, "Debug-{0}".format(current.config.buildPlatform))) else "Release"
         return os.path.join(path, "{0}-{1}".format(build, current.config.buildPlatform), appName)
+
+    def getApk(self, current):
+        return os.path.join(self.getPath(), "test", "android", "controller", "build", "outputs", "apk", "debug",
+                            "controller-debug.apk")
+
+    def getActivityName(self):
+        return "com.zeroc.testcontrollercpp/.ControllerActivity"
 
 class JavaMapping(Mapping):
 

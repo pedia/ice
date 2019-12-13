@@ -750,7 +750,9 @@ IceUtil::Thread::start(size_t stackSize, bool realtimeScheduling, int priority)
             pthread_attr_destroy(&attr);
             throw ThreadSyscallException(__FILE__, __LINE__, rc);
         }
+#if !defined(__ANDROID__) || __ANDROID_API__ > 27
         pthread_attr_setinheritsched(&attr, PTHREAD_EXPLICIT_SCHED);
+#endif
     }
     rc = pthread_create(&_thread, &attr, startHook, this);
     pthread_attr_destroy(&attr);

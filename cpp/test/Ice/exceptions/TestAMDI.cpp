@@ -9,6 +9,9 @@
 using namespace Test;
 using namespace std;
 
+namespace
+{
+
 bool
 endsWith(const string& s, const string& findme)
 {
@@ -17,6 +20,8 @@ endsWith(const string& s, const string& findme)
         return 0 == s.compare(s.length() - findme.length(), findme.length(), findme);
     }
     return false;
+}
+
 }
 
 ThrowerI::ThrowerI()

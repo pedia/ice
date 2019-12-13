@@ -12,7 +12,7 @@
 using namespace std;
 using namespace Test;
 
-class HelloI : public virtual Hello
+class HelloClientI : public virtual Hello
 {
 public:
 
@@ -697,7 +697,7 @@ allTests(Test::TestHelper* helper, const string& ref)
 
         Ice::Identity id;
         id.name = Ice::generateUUID();
-        adapter->add(ICE_MAKE_SHARED(HelloI), id);
+        adapter->add(ICE_MAKE_SHARED(HelloClientI), id);
 
         // Ensure that calls on the well-known proxy is collocated.
         HelloPrxPtr helloPrx = ICE_CHECKED_CAST(HelloPrx, communicator->stringToProxy(communicator->identityToString(id)));

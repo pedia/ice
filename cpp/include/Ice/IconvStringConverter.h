@@ -8,9 +8,9 @@
 #include <Ice/Config.h>
 
 //
-// For all platforms except Windows
+// For all platforms except Windows and Android
 //
-#ifndef _WIN32
+#if !defined(_WIN32) && !defined(__ANDROID__)
 
 #include <Ice/StringConverter.h>
 #include <IceUtil/StringUtil.h>

@@ -52,12 +52,12 @@ public:
 };
 ICE_DEFINE_PTR(ControllerHelperPtr, ControllerHelper);
 
-#if defined(ICE_OS_UWP) || (TARGET_OS_IPHONE != 0)
+#if defined(ICE_OS_UWP) || (TARGET_OS_IPHONE != 0) || defined(__ANDROID__)
 
 //
 // streambuf redirection implementation
 //
-class StreamHelper : public std::streambuf
+class TEST_API StreamHelper : public std::streambuf
 {
 public:
 
@@ -132,7 +132,7 @@ private:
 #endif
 };
 
-#if defined(ICE_OS_UWP) || (TARGET_OS_IPHONE != 0)
+#if defined(ICE_OS_UWP) || (TARGET_OS_IPHONE != 0) || defined(__ANDROID__)
 
 class TestFailedException
 {
@@ -185,6 +185,17 @@ runTest(int argc, char* argv[])
         {                                                     \
             return new HELPER();                              \
         }                                                     \
+    }
+
+#elif defined(__ANDROID__)
+
+#   define DEFINE_TEST(HELPER)                                 \
+    extern "C"                                                 \
+    {                                                          \
+        ICE_DECLSPEC_EXPORT Test::TestHelper* create##HELPER() \
+        {                                                      \
+            return new HELPER();                               \
+        }                                                      \
     }
 
 #else

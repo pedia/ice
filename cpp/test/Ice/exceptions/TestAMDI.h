@@ -7,9 +7,6 @@
 
 #include <TestAMD.h>
 
-bool
-endsWith(const std::string&, const std::string&);
-
 class ThrowerI : public Test::Thrower
 {
 public:

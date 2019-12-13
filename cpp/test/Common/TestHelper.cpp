@@ -28,7 +28,7 @@ shutdownOnInterruptCallback(int)
 
 }
 
-#if defined(ICE_OS_UWP) || (TARGET_OS_IPHONE != 0)
+#if defined(ICE_OS_UWP) || (TARGET_OS_IPHONE != 0) || defined(__ANDROID__)
 
 StreamHelper::StreamHelper() : _controllerHelper(0)
 {
@@ -132,8 +132,10 @@ Test::TestHelper::TestHelper(bool registerPlugins) :
     if(registerPlugins)
     {
 #ifdef ICE_STATIC_LIBS
+#   if !defined(__ANDROID__)
         Ice::registerIceSSL(false);
         Ice::registerIceWS(true);
+#   endif
         Ice::registerIceUDP(true);
 #   ifdef ICE_HAS_BT
         Ice::registerIceBT(false);
@@ -328,7 +330,7 @@ Test::TestHelper::shutdown()
     }
 }
 
-#if defined(ICE_OS_UWP) || (TARGET_OS_IPHONE != 0)
+#if defined(ICE_OS_UWP) || (TARGET_OS_IPHONE != 0) || defined(__ANDROID__)
 void
 Test::TestHelper::shutdownOnInterrupt()
 {

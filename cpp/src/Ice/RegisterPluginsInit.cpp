@@ -19,20 +19,21 @@ Ice::Plugin* createIceWS(const Ice::CommunicatorPtr&, const std::string&, const 
 IceInternal::RegisterPluginsInit::RegisterPluginsInit()
 {
     Ice::registerPluginFactory("IceTCP", createIceTCP, true);
-
     //
     // Only include the UDP and WS transport plugins with non-static builds or Gem/PyPI/Swift
     // builds.
     //
 #if !defined(ICE_STATIC_LIBS) || defined(ICE_GEM) || defined(ICE_PYPI) || defined(ICE_SWIFT)
     Ice::registerPluginFactory("IceUDP", createIceUDP, true);
+#if !defined(__ANDROID__)
     Ice::registerPluginFactory("IceWS", createIceWS, true);
+#endif
 #endif
 
     //
     // Also include IceStringConverter in Gem/PyPI builds.
     //
-#if defined(ICE_GEM) || defined(ICE_PYPI)
+#if defined(ICE_GEM) || defined(ICE_PYPI) && !defined(__ANDROID__)
     Ice::registerPluginFactory("IceStringConverter", createStringConverter, false);
 #endif
 }

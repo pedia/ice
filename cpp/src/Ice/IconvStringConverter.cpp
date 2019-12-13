@@ -4,7 +4,7 @@
 
 #include <Ice/IconvStringConverter.h>
 
-#ifndef _WIN32
+#if !defined(_WIN32) && !defined(__ANDROID__)
 
 using namespace std;
 using namespace Ice;

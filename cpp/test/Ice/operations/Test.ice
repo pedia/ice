@@ -40,7 +40,7 @@ sequence<long> LongS;
 sequence<float> FloatS;
 sequence<double> DoubleS;
 sequence<string> StringS;
-sequence<["cpp:type:wstring"]string> WStringS;
+sequence<["cpp:type:wstring"] string> WStringS;
 sequence<MyEnum> MyEnumS;
 sequence<MyClass*> MyClassS;
 
@@ -246,6 +246,7 @@ interface MyClass
     string opString1(string opString1);
     StringS opStringS1(StringS opStringS1);
     ByteBoolD opByteBoolD1(ByteBoolD opByteBoolD1);
+
     StringS opStringS2(StringS stringS);
     ByteBoolD opByteBoolD2(ByteBoolD byteBoolD);
 

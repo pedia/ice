@@ -13,7 +13,6 @@ using namespace Test;
 namespace
 {
 const bool printException = false;
-}
 
 class EmptyI : public virtual Empty
 {
@@ -385,6 +384,8 @@ private:
 };
 
 typedef IceUtil::Handle<Callback> CallbackPtr;
+
+}
 
 bool
 endsWith(const string& s, const string& findme)

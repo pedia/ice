@@ -1071,18 +1071,10 @@ IceUtilInternal::errorToString(int error)
     vector<char> buffer(500);
     while(true)
     {
-#if !defined(__GLIBC__) || ((_POSIX_C_SOURCE >= 200112L || _XOPEN_SOURCE >= 600) && !_GNU_SOURCE)
+#if defined(__GLIBC__) && (_GNU_SOURCE || !(_POSIX_C_SOURCE >= 200112L || _XOPEN_SOURCE >= 600)) || defined(__ANDROID__)
         //
-        // Use the XSI-compliant version of strerror_r
-        //
-        int err = strerror_r(error, &buffer[0], buffer.size());
-        if(err == 0)
-        {
-            return string(&buffer[0]);
-        }
-#else
-        //
-        // Use the GNU-specific version of strerror_r
+        // Use the GNU-specific version of strerror_r if using glibc and _GNU_SOURCE is defined
+        // or when using an older glibc which doesn't provide the XSI compliant version.
         //
         int oerrno = errno;
         errno = 0;
@@ -1092,6 +1084,15 @@ IceUtilInternal::errorToString(int error)
         if(err == 0)
         {
             return msg;
+        }
+#else
+        //
+        // Use the XSI-compliant version of strerror_r
+        //
+        int err = strerror_r(error, &buffer[0], buffer.size());
+        if(err == 0)
+        {
+            return string(&buffer[0]);
         }
 #endif
         if(err == ERANGE && buffer.size() < 1024 * 1024)

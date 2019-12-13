@@ -89,6 +89,8 @@ dictionary<string, DoubleS> StringDoubleSD;
 dictionary<string, StringS> StringStringSD;
 dictionary<MyEnum, MyEnumS> MyEnumMyEnumSD;
 
+exception SomeException {}
+
 ["amd"] interface MyClass
 {
     void shutdown();
@@ -150,7 +152,7 @@ dictionary<MyEnum, MyEnumS> MyEnumMyEnumSD;
                         out StringSS p3);
 
     StringSSS opStringSSS(StringSSS p1, StringSSS p2,
-                        out StringSSS p3);
+                          out StringSSS p3);
 
     ByteBoolD opByteBoolD(ByteBoolD p1, ByteBoolD p2,
                           out ByteBoolD p3);
@@ -224,6 +226,7 @@ dictionary<MyEnum, MyEnumS> MyEnumMyEnumSD;
     IntS opIntS(IntS s);
 
     void opByteSOneway(ByteS s);
+
     int opByteSOnewayCallCount();
 
     Ice::Context opContext();
@@ -296,6 +299,8 @@ const string s7 = "\u05F0";                           // HEBREW LIGATURE YIDDISH
 const string s8 = "\U00010000";                       // LINEAR B SYLLABLE B008 A (U+10000)
 const string s9 = "\U0001F34C";                       // BANANA (U+1F34C)
 const string s10 = "\u0DA7";                          // Sinhala Letter Alpapraana Ttayanna
+const string s11 = "\xE2\x82\xac\342\202\254\342\x82\254"; // 3 euro signs (U+20AC) in UTF-8
+const string s12 = "\x5C101";                          // \101 (not an octal escape)
 
 const string sw0 = "\U0000005c";                      // backslash
 const string sw1 = "\U00000041";                      // A
@@ -390,7 +395,6 @@ const ["cpp:type:wstring"]string wsw10 = "\U00000DA7";                     // Si
 \t      horizontal tab  byte 0x09 in ASCII encoding
 \v      vertical tab    byte 0x0b in ASCII encoding
 **/
-
 const ["cpp:type:wstring"]string wss0 = "\'\"\?\\\a\b\f\n\r\t\v\6";
 const ["cpp:type:wstring"]string wss1 = "\u0027\u0022\u003f\u005c\u0007\u0008\u000c\u000a\u000d\u0009\u000b\u0006";
 const ["cpp:type:wstring"]string wss2 = "\U00000027\U00000022\U0000003f\U0000005c\U00000007\U00000008\U0000000c\U0000000a\U0000000d\U00000009\U0000000b\U00000006";
@@ -416,6 +420,21 @@ const ["cpp:type:wstring"]string wss5 = "\\u0041\\";  /* \u0041\ */
 const ["cpp:type:wstring"]string wsu0 = "ĨŸÿĀἀ𐆔𐅪𐆘🍀🍁🍂🍃";
 const ["cpp:type:wstring"]string wsu1 = "\u0128\u0178\u00FF\u0100\u1F00\U00010194\U0001016A\U00010198\U0001F340\U0001F341\U0001F342\U0001F343";
 const ["cpp:type:wstring"]string wsu2 = "\U00000128\U00000178\U000000FF\U00000100\U00001F00\U00010194\U0001016A\U00010198\U0001F340\U0001F341\U0001F342\U0001F343";
+
+}
+
+module Test2
+{
+
+/**
+ *
+ * Makes sure that proxy operations are correctly generated when extending an interface from
+ * a different module (ICE-7639).
+ *
+ **/
+interface MyDerivedClass extends Test::MyClass
+{
+}
 
 }
 
