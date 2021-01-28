@@ -71,12 +71,12 @@ IceGrid::toString(const vector<string>& v, const string& sep)
 }
 
 string
-IceGrid::toString(const Ice::Exception& exception)
+IceGrid::toString(exception_ptr exception)
 {
     std::ostringstream os;
     try
     {
-        exception.ice_throw();
+        rethrow_exception(exception);
     }
     catch(const NodeUnreachableException& ex)
     {
@@ -239,7 +239,8 @@ IceGrid::escapeProperty(const string& s, bool escapeEqual)
 }
 
 ObjectInfo
-IceGrid::toObjectInfo(const Ice::CommunicatorPtr& communicator, const ObjectDescriptor& obj, const string& adapterId)
+IceGrid::toObjectInfo(const shared_ptr<Ice::Communicator>& communicator, const ObjectDescriptor& obj,
+                      const string& adapterId)
 {
     ObjectInfo info;
     info.type = obj.type;
@@ -264,7 +265,7 @@ IceGrid::toObjectInfo(const Ice::CommunicatorPtr& communicator, const ObjectDesc
 }
 
 void
-IceGrid::setupThreadPool(const PropertiesPtr& properties, const string& name, int size, int sizeMax, bool serialize)
+IceGrid::setupThreadPool(const shared_ptr<Properties>& properties, const string& name, int size, int maxSize, bool serialize)
 {
     if(properties->getPropertyAsIntWithDefault(name + ".Size", 0) < size)
     {
@@ -277,16 +278,16 @@ IceGrid::setupThreadPool(const PropertiesPtr& properties, const string& name, in
         size = properties->getPropertyAsInt(name + ".Size");
     }
 
-    if(sizeMax > 0 && properties->getPropertyAsIntWithDefault(name + ".SizeMax", 0) < sizeMax)
+    if(maxSize > 0 && properties->getPropertyAsIntWithDefault(name + ".MaxSize", 0) < maxSize)
     {
-        if(size >= sizeMax)
+        if(size >= maxSize)
         {
-            sizeMax = size * 10;
+            maxSize = size * 10;
         }
 
         ostringstream os;
-        os << sizeMax;
-        properties->setProperty(name + ".SizeMax", os.str());
+        os << maxSize;
+        properties->setProperty(name + ".MaxSize", os.str());
     }
 
     if(serialize)
@@ -298,12 +299,17 @@ IceGrid::setupThreadPool(const PropertiesPtr& properties, const string& name, in
 int
 IceGrid::getMMVersion(const string& o)
 {
-    //
     // Strip the version
-    //
     string::size_type beg = o.find_first_not_of(' ');
     string::size_type end = o.find_last_not_of(' ');
     string version = o.substr(beg == string::npos ? 0 : beg, end == string::npos ? o.length() - 1 : end - beg + 1);
+
+    // Remove any pre-release information from the version string.
+    string::size_type dashPos = version.find('-');
+    if(dashPos != string::npos)
+    {
+        version = version.substr(0, dashPos);
+    }
 
     string::size_type minorPos = version.find('.');
     string::size_type patchPos = version.find('.', minorPos + 1);
@@ -635,4 +641,10 @@ IceGrid::createDirectoryRecursive(const string& pa)
             }
         }
     }
+}
+
+int
+IceGrid::secondsToInt(const std::chrono::seconds& sec)
+{
+    return chrono::duration_cast<chrono::duration<int>>(sec).count();
 }

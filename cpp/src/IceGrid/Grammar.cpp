@@ -58,8 +58,6 @@
 /* Using locations.  */
 #define YYLSP_NEEDED 0
 
-
-
 /* Tokens.  */
 #ifndef YYTOKENTYPE
 # define YYTOKENTYPE
@@ -148,12 +146,8 @@
 #define ICE_GRID_ENABLE 295
 #define ICE_GRID_DISABLE 296
 
-
-
-
 /* Copy the first part of user declarations.  */
 #line 1 "src/IceGrid/Grammar.y"
-
 
 //
 // Copyright (c) ZeroC, Inc. All rights reserved.
@@ -198,8 +192,6 @@ yyerror(const char* s)
     parser->invalidCommand(s);
 }
 
-
-
 /* Enabling traces.  */
 #ifndef YYDEBUG
 # define YYDEBUG 1
@@ -225,10 +217,7 @@ typedef int YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 #endif
 
-
-
 /* Copy the second part of user declarations.  */
-
 
 /* Line 216 of yacc.c.  */
 #line 235 "src/IceGrid/Grammar.cpp"
@@ -385,7 +374,6 @@ void free (void *); /* INFRINGES ON USER NAME SPACE */
 #  endif
 # endif
 #endif /* ! defined yyoverflow || YYERROR_VERBOSE */
-
 
 #if (! defined yyoverflow \
      && (! defined __cplusplus \
@@ -1356,7 +1344,6 @@ static const yytype_uint8 yystos[] =
 #define YYABORT		goto yyabortlab
 #define YYERROR		goto yyerrorlab
 
-
 /* Like YYERROR except do call yyerror.  This remains here temporarily
    to ease the transition to the new meaning of YYERROR, for GCC.
    Once GCC version 2 has supplanted version 1, this can go.  */
@@ -1382,10 +1369,8 @@ do								\
     }								\
 while (YYID (0))
 
-
 #define YYTERROR	1
 #define YYERRCODE	256
-
 
 /* YYLLOC_DEFAULT -- Set CURRENT to span from RHS[1] to RHS[N].
    If N is 0, then set CURRENT to the empty location which ends
@@ -1412,7 +1397,6 @@ while (YYID (0))
     while (YYID (0))
 #endif
 
-
 /* YY_LOCATION_PRINT -- Print the location on the stream.
    This macro was not mandated originally: define only if we know
    we won't break user code: when these are the locations we know.  */
@@ -1427,7 +1411,6 @@ while (YYID (0))
 #  define YY_LOCATION_PRINT(File, Loc) ((void) 0)
 # endif
 #endif
-
 
 /* YYLEX -- calling `yylex' with the right arguments.  */
 
@@ -1462,7 +1445,6 @@ do {									  \
     }									  \
 } while (YYID (0))
 
-
 /*--------------------------------.
 | Print this symbol on YYOUTPUT.  |
 `--------------------------------*/
@@ -1494,7 +1476,6 @@ yy_symbol_value_print (yyoutput, yytype, yyvaluep)
 	break;
     }
 }
-
 
 /*--------------------------------.
 | Print this symbol on YYOUTPUT.  |
@@ -1549,7 +1530,6 @@ do {								\
     yy_stack_print ((Bottom), (Top));				\
 } while (YYID (0))
 
-
 /*------------------------------------------------.
 | Report that the YYRULE is going to be reduced.  |
 `------------------------------------------------*/
@@ -1597,7 +1577,6 @@ int yydebug;
 # define YY_REDUCE_PRINT(Rule)
 #endif /* !YYDEBUG */
 
-
 /* YYINITDEPTH -- initial size of the parser's stacks.  */
 #ifndef	YYINITDEPTH
 # define YYINITDEPTH 200
@@ -1613,8 +1592,6 @@ int yydebug;
 #ifndef YYMAXDEPTH
 # define YYMAXDEPTH 10000
 #endif
-
-
 
 #if YYERROR_VERBOSE
 
@@ -1876,9 +1853,26 @@ int yyparse ();
 #endif /* ! YYPARSE_PARAM */
 
 
+      default:
+	break;
+    }
+}
 
+/* Prevent warnings from -Wmissing-prototypes.  */
 
-
+#ifdef YYPARSE_PARAM
+#if defined __STDC__ || defined __cplusplus
+int yyparse (void *YYPARSE_PARAM);
+#else
+int yyparse ();
+#endif
+#else /* ! YYPARSE_PARAM */
+#if defined __STDC__ || defined __cplusplus
+int yyparse (void);
+#else
+int yyparse ();
+#endif
+#endif /* ! YYPARSE_PARAM */
 
 /*----------.
 | yyparse.  |
@@ -1947,8 +1941,6 @@ int yynerrs;
   YYSTYPE *yyvs = yyvsa;
   YYSTYPE *yyvsp;
 
-
-
 #define YYPOPSTACK(N)   (yyvsp -= (N), yyssp -= (N))
 
   YYSIZE_T yystacksize = YYINITDEPTH;
@@ -1956,7 +1948,6 @@ int yynerrs;
   /* The variables used to return semantic value and location from the
      action routines.  */
   YYSTYPE yyval;
-
 
   /* The number of symbols on the RHS of the reduced rule.
      Keep to zero when no symbol should be popped.  */
@@ -2126,7 +2117,6 @@ yybackup:
 
   goto yynewstate;
 
-
 /*-----------------------------------------------------------.
 | yydefault -- do the default action for the current state.  |
 `-----------------------------------------------------------*/
@@ -2135,7 +2125,6 @@ yydefault:
   if (yyn == 0)
     goto yyerrlab;
   goto yyreduce;
-
 
 /*-----------------------------.
 | yyreduce -- Do a reduction.  |
@@ -2153,7 +2142,6 @@ yyreduce:
      unconditionally makes the parser a bit smaller, and it avoids a
      GCC warning that YYVAL may be used uninitialized.  */
   yyval = yyvsp[1-yylen];
-
 
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
@@ -3309,7 +3297,6 @@ yyreduce:
 ;}
     break;
 
-
 /* Line 1267 of yacc.c.  */
 #line 3315 "src/IceGrid/Grammar.cpp"
       default: break;
@@ -3336,7 +3323,6 @@ yyreduce:
     yystate = yydefgoto[yyn - YYNTOKENS];
 
   goto yynewstate;
-
 
 /*------------------------------------.
 | yyerrlab -- here on detecting error |
@@ -3383,8 +3369,6 @@ yyerrlab:
 #endif
     }
 
-
-
   if (yyerrstatus == 3)
     {
       /* If just tried and failed to reuse look-ahead token after an
@@ -3408,7 +3392,6 @@ yyerrlab:
      token.  */
   goto yyerrlab1;
 
-
 /*---------------------------------------------------.
 | yyerrorlab -- error raised explicitly by YYERROR.  |
 `---------------------------------------------------*/
@@ -3427,7 +3410,6 @@ yyerrorlab:
   YY_STACK_PRINT (yyss, yyssp);
   yystate = *yyssp;
   goto yyerrlab1;
-
 
 /*-------------------------------------------------------------.
 | yyerrlab1 -- common code for both syntax error and YYERROR.  |
@@ -3453,7 +3435,6 @@ yyerrlab1:
       if (yyssp == yyss)
 	YYABORT;
 
-
       yydestruct ("Error: popping",
 		  yystos[yystate], yyvsp);
       YYPOPSTACK (1);
@@ -3466,13 +3447,11 @@ yyerrlab1:
 
   *++yyvsp = yylval;
 
-
   /* Shift the error token.  */
   YY_SYMBOL_PRINT ("Shifting", yystos[yyn], yyvsp, yylsp);
 
   yystate = yyn;
   goto yynewstate;
-
 
 /*-------------------------------------.
 | yyacceptlab -- YYACCEPT comes here.  |
@@ -3523,6 +3502,3 @@ yyreturn:
   /* Make sure YYID is used.  */
   return YYID (yyresult);
 }
-
-
-

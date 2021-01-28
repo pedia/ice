@@ -22,7 +22,7 @@ module IceStorm
  * The event data.
  *
  **/
-["cpp:class"] struct EventData
+struct EventData
 {
     /** The operation name. */
     string op;
@@ -39,7 +39,7 @@ local exception SendQueueSizeMaxReached
 }
 
 /** A sequence of EventData. */
-["cpp:type:std::deque< ::IceStorm::EventDataPtr>"] sequence<EventData> EventDataSeq;
+["cpp:type:std::deque<IceStorm::EventData>"] sequence<EventData> EventDataSeq;
 
 /**
  *

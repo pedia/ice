@@ -9,7 +9,6 @@
 #include <Ice/Identity.ice>
 #include <Ice/BuiltinSequences.ice>
 #include <Ice/ProcessF.ice>
-#include <Ice/Properties.ice>
 
 #include <Glacier2/Session.ice>
 #include <IceGrid/Admin.ice>
@@ -22,6 +21,8 @@ local exception SynchronizationException
 {
 }
 
+// This class is no longer used. We keep it only for interop with IceGrid 3.7.
+//
 class InternalDbEnvDescriptor
 {
     /** The name of the database environment. */
@@ -111,7 +112,7 @@ class InternalServerDescriptor
     /** The indirect object adapters. */
     InternalAdapterDescriptorSeq adapters;
 
-    /** The database environments. */
+    // Not used, always empty. Kept only for interop with IceGrid 3.7.
     InternalDbEnvDescriptorSeq dbEnvs;
 
     /** The configuration files of the server. */
@@ -514,11 +515,11 @@ exception ReplicaActiveException
 
 enum TopicName
 {
-    RegistryObserverTopicName,
-    NodeObserverTopicName,
-    ApplicationObserverTopicName,
-    AdapterObserverTopicName,
-    ObjectObserverTopicName
+    RegistryObserver,
+    NodeObserver,
+    ApplicationObserver,
+    AdapterObserver,
+    ObjectObserver
 }
 
 interface DatabaseObserver extends ApplicationObserver, ObjectObserver, AdapterObserver

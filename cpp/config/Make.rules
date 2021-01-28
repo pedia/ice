@@ -62,10 +62,11 @@ static_excludes         = test/Ice/library test/Ice/plugin
 #
 cpp11_components        = $(coreandstub_components) \
                           glacier2router Glacier2CryptPermissionsVerifier \
-                          icebox iceboxadmin icebridge \
+                          icebox icebridge \
                           IceDB \
                           IceXML \
                           icegridnode icegridregistry icegridadmin icegriddb \
+                          IceStormService icestormadmin icestormdb \
 
 cpp11_projects          = test/Common \
                           test/IceUtil/% \
@@ -80,7 +81,7 @@ cpp11_projects          = test/Common \
                           test/IceGrid/% \
                           test/IceBridge/simple
 
-cpp11_excludes          = test/Ice/gc
+cpp11_excludes          =  test/Ice/gc
 
 #
 # If building on a Linux multilib platform, we restrict what we build for
