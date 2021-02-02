@@ -93,8 +93,7 @@ main(int argc, char* argv[])
     {
         IceUtil::CtrlCHandler ctrlCHandler;
         auto defaultProps = Ice::createProperties();
-        defaultProps->setProperty("IceGridAdmin.Server.Endpoints", "tcp -h 127.0.0.1");
-        defaultProps->setProperty("IceGridAdmin.Server.ServerName", "127.0.0.1");
+        defaultProps->setProperty("IceGridAdmin.Server.Endpoints", "tcp -h localhost");
         Ice::InitializationData id;
         id.properties = createProperties(args, defaultProps);
         id.properties->setProperty("Ice.Warn.Endpoints", "0");

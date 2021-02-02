@@ -142,7 +142,7 @@ private:
     const std::shared_ptr<FileReaderPrx> _reader;
     const std::string _filename;
     long long _offset;
-    const int _messageMaxSize;
+    const int _messageSizeMax;
 };
 
 };

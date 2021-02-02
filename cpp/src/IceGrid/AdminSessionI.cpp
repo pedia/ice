@@ -53,12 +53,12 @@ FileIteratorI::FileIteratorI(const shared_ptr<AdminSessionI>& session,
                              const shared_ptr<FileReaderPrx>& reader,
                              const string& filename,
                              long long offset,
-                             int messageMaxSize) :
+                             int messageSizeMax) :
     _session(session),
     _reader(reader),
     _filename(filename),
     _offset(offset),
-    _messageMaxSize(messageMaxSize - 256) // Room for the header
+    _messageSizeMax(messageSizeMax - 256) // Room for the header
 {
 }
 
@@ -67,7 +67,7 @@ FileIteratorI::read(int size, Ice::StringSeq& lines, const Ice::Current&)
 {
     try
     {
-        return _reader->read(_filename, _offset, size > _messageMaxSize ? _messageMaxSize : size, _offset, lines);
+        return _reader->read(_filename, _offset, size > _messageSizeMax ? _messageSizeMax : size, _offset, lines);
     }
     catch(const std::exception& ex)
     {
@@ -414,10 +414,10 @@ AdminSessionI::addFileIterator(const shared_ptr<FileReaderPrx>& reader, const st
     }
 
     auto properties = reader->ice_getCommunicator()->getProperties();
-    int messageMaxSize = properties->getPropertyAsIntWithDefault("Ice.MessageMaxSize", 1024) * 1024;
+    int messageSizeMax = properties->getPropertyAsIntWithDefault("Ice.MessageSizeMax", 1024) * 1024;
 
     auto self = static_pointer_cast<AdminSessionI>(shared_from_this());
-    auto obj = _servantManager->add(make_shared<FileIteratorI>(self, reader, filename, offset, messageMaxSize), self);
+    auto obj = _servantManager->add(make_shared<FileIteratorI>(self, reader, filename, offset, messageSizeMax), self);
     return Ice::uncheckedCast<FileIteratorPrx>(obj);
 }
 

@@ -1,4 +1,3 @@
-#include <IceUtil/ScannerConfig.h>
 #line 1 "src/IceGrid/Scanner.cpp"
 //
 // Copyright (c) ZeroC, Inc. All rights reserved.
@@ -53,7 +52,6 @@ typedef int16_t flex_int16_t;
 typedef uint16_t flex_uint16_t;
 typedef int32_t flex_int32_t;
 typedef uint32_t flex_uint32_t;
-typedef uint64_t flex_uint64_t;
 #else
 typedef signed char flex_int8_t;
 typedef short int flex_int16_t;
@@ -61,7 +59,6 @@ typedef int flex_int32_t;
 typedef unsigned char flex_uint8_t; 
 typedef unsigned short int flex_uint16_t;
 typedef unsigned int flex_uint32_t;
-#endif /* ! C99 */
 
 /* Limits of integral types. */
 #ifndef INT8_MIN
@@ -490,8 +487,8 @@ std::string parseSingleQuotedString();
 }
 #define         YY_USER_INIT initScanner();
 
-#line 490 "src/IceGrid/Scanner.cpp"
-#line 491 "src/IceGrid/Scanner.cpp"
+#line 497 "src/IceGrid/Scanner.cpp"
+#line 498 "src/IceGrid/Scanner.cpp"
 
 #define INITIAL 0
 
@@ -708,10 +705,9 @@ YY_DECL
 		}
 
 	{
-#line 50 "src/IceGrid/Scanner.l"
+#line 57 "src/IceGrid/Scanner.l"
 
-
-#line 711 "src/IceGrid/Scanner.cpp"
+#line 718 "src/IceGrid/Scanner.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -770,7 +766,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 52 "src/IceGrid/Scanner.l"
+#line 59 "src/IceGrid/Scanner.l"
 {
     // C++-style comment
     int c;
@@ -783,7 +779,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 62 "src/IceGrid/Scanner.l"
+#line 69 "src/IceGrid/Scanner.l"
 {
     // C-style comment
     while(true)
@@ -812,7 +808,7 @@ YY_RULE_SETUP
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 87 "src/IceGrid/Scanner.l"
+#line 94 "src/IceGrid/Scanner.l"
 {
     size_t len = strlen(yytext);
     for(size_t i = 0; i < len; ++i)
@@ -827,14 +823,14 @@ YY_RULE_SETUP
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 98 "src/IceGrid/Scanner.l"
+#line 105 "src/IceGrid/Scanner.l"
 {
     return ';';
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 102 "src/IceGrid/Scanner.l"
+#line 109 "src/IceGrid/Scanner.l"
 {
     // "..."-type strings
     string s = parseDoubleQuotedString();
@@ -845,7 +841,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 110 "src/IceGrid/Scanner.l"
+#line 117 "src/IceGrid/Scanner.l"
 {
     // '...'-type strings
     string s;
@@ -873,7 +869,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 135 "src/IceGrid/Scanner.l"
+#line 142 "src/IceGrid/Scanner.l"
 {
     // Simple strings
     string s;
@@ -912,10 +908,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 171 "src/IceGrid/Scanner.l"
+#line 178 "src/IceGrid/Scanner.l"
 ECHO;
 	YY_BREAK
-#line 915 "src/IceGrid/Scanner.cpp"
+#line 922 "src/IceGrid/Scanner.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1109,7 +1105,7 @@ static int yy_get_next_buffer (void)
 			{ /* Not enough room in the buffer - grow it. */
 
 			/* just a shorter name for the current buffer */
-			YY_BUFFER_STATE b = YY_CURRENT_BUFFER;
+			YY_BUFFER_STATE b = YY_CURRENT_BUFFER_LVALUE;
 
 			int yy_c_buf_p_offset =
 				(int) ((yy_c_buf_p) - b->yy_ch_buf);
@@ -1246,7 +1242,7 @@ static int yy_get_next_buffer (void)
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 	yy_is_jam = (yy_current_state == 18);
 
-	return yy_is_jam ? 0 : yy_current_state;
+		return yy_is_jam ? 0 : yy_current_state;
 }
 
 #ifndef YY_NO_UNPUT
@@ -1678,8 +1674,8 @@ YY_BUFFER_STATE yy_scan_string (const char * yystr )
 
 /** Setup the input buffer state to scan the given bytes. The next call to yylex() will
  * scan from a @e copy of @a bytes.
- * @param bytes the byte buffer to scan
- * @param len the number of bytes in the buffer pointed to by @a bytes.
+ * @param yybytes the byte buffer to scan
+ * @param _yybytes_len the number of bytes in the buffer pointed to by @a bytes.
  * 
  * @return the newly allocated buffer state object.
  */
@@ -1687,7 +1683,8 @@ YY_BUFFER_STATE yy_scan_bytes  (const char * yybytes, int  _yybytes_len )
 {
 	YY_BUFFER_STATE b;
 	char *buf;
-	yy_size_t n, i;
+	yy_size_t n;
+	int i;
     
 	/* Get memory for full buffer, including space for trailing EOB's. */
 	n = (yy_size_t) (_yybytes_len + 2);
@@ -1919,8 +1916,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 171 "src/IceGrid/Scanner.l"
-
+#line 178 "src/IceGrid/Scanner.l"
 
 namespace IceGrid {
 
@@ -2043,4 +2039,3 @@ parseSingleQuotedString()
 }
 
 }
-

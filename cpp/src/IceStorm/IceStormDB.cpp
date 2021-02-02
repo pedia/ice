@@ -29,13 +29,8 @@ main(int argc, char* argv[])
 
     try
     {
-        Ice::CtrlCHandler ctrlCHandler;
         Ice::CommunicatorHolder ich(argc, argv);
-        communicator = ich.communicator();
-
-        ctrlCHandler.setCallback(&destroyCommunicator);
-
-        status = run(Ice::argsToStringSeq(argc, argv));
+        status = run(ich.communicator(), Ice::argsToStringSeq(argc, argv));
     }
     catch(const std::exception& ex)
     {
