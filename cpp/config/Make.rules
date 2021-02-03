@@ -97,7 +97,7 @@ cpp11_projects          = test/Common \
                           test/IceGrid/% \
                           test/IceBridge/simple
 
-cpp11_excludes          =  test/Ice/gc
+cpp11_excludes          = test/Ice/gc
 
 #
 # If building on a Linux multilib platform, we restrict what we build for
@@ -123,7 +123,6 @@ cpp11_cppflags          = -DICE_CPP11_MAPPING -std=c++17
 cpp11_ldflags           = $(cpp11_cppflags)
 cpp11_targetname        = $(if $(or $(filter-out $($1_target),program), $(if $(filter icebox,$1), $(filter $(bindir)%,$($4_targetdir)),)),++11)
 cpp11_targetdir         = $(if $(filter %/build,$5),cpp11)
-
 
 #
 # $(call make-cpp-src-project,$1=project)
