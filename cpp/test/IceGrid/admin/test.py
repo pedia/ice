@@ -149,7 +149,7 @@ class IceGridAdminTestCase(IceGridTestCase):
             raise RuntimeError("failed!\n" + str(e))
 
 routerProps= lambda process, current: {
-    'Glacier2.SessionTimeout' : 5,
+    'Glacier2.Client.ACM.Timeout' : 5,
     'Glacier2.SessionManager' : 'TestIceGrid/AdminSessionManager',
     'Glacier2.PermissionsVerifier' : 'Glacier2/NullPermissionsVerifier',
     'Glacier2.SSLSessionManager' : 'TestIceGrid/AdminSSLSessionManager',

@@ -11,7 +11,7 @@ class IceStorm(ProcessFromBinDir, Server):
 
     def __init__(self, instanceName="IceStorm", replica=0, nreplicas=0, transient=False, portnum=0,
                  createDb=True, cleanDb=True, *args, **kargs):
-        Server.__init__(self, exe="icebox", ready="IceStorm", mapping=Mapping.getByName("cpp"), *args, **kargs)
+        Server.__init__(self, exe="icebox++11", ready="IceStorm", mapping=Mapping.getByName("cpp"), *args, **kargs)
         self.portnum = portnum
         self.replica = replica
         self.nreplicas = nreplicas
