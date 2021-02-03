@@ -471,6 +471,7 @@ using namespace IceGrid;
 #      undef yywrap
 #      define yywrap() 1
 #   endif
+#   define YY_NO_UNISTD_H
 #endif
 
 #define YY_INPUT(buf, result, maxSize) parser->getInput(buf, result, maxSize)
