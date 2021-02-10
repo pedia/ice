@@ -9,7 +9,7 @@
 #
 # Objective-C mapping configurations
 #
-supported-configs       = shared static arc-shared arc-static
+supported-configs       = cpp98-shared cpp98-static arc-shared arc-static
 
 ifeq ($(os),Darwin)
 include $(lang_srcdir)/config/Make.xcodesdk.rules
