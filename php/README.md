@@ -213,10 +213,10 @@ libbz2
 * Windows
 ```
 bzip2.dll
-ice37.dll
-icediscovery37.dll
-icelocatordiscovery37.dll
-icessl37.dll
+ice38.dll
+icediscovery38.dll
+icelocatordiscovery38.dll
+icessl38.dll
 ```
 
 In general, these libraries must reside in a directory of the user's PATH.
@@ -335,5 +335,5 @@ The enclosing directory also needs to be accessible. For example:
 ```
 
 [1]: https://zeroc.com/downloads/ice
-[2]: https://doc.zeroc.com/ice/3.7/release-notes/supported-platforms-for-ice-3-7-5
+[2]: https://doc.zeroc.com/ice/3.7/release-notes/supported-platforms-for-ice-3-8-0
 [3]: https://github.com/zeroc-ice/ice-builder-visualstudio

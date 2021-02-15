@@ -4,7 +4,7 @@
     <PropertyGroup>
       <IceBuildingUWP>yes</IceBuildingUWP>
       <IceCppMapping>cpp11</IceCppMapping>
-      <IceSoVersion>37</IceSoVersion>
+      <IceSoVersion>38</IceSoVersion>
     </PropertyGroup>
 
     <Import Project="$(MSBuildThisFileDirectory)\ice.cpp.props"/>

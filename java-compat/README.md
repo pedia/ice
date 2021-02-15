@@ -75,14 +75,14 @@ have not built Ice for C++ in this source distribution, you must set the
 example, on Linux:
 
 ```
-export ICE_HOME=/opt/Ice-3.7.5 (For local build)
+export ICE_HOME=/opt/Ice-3.8.0 (For local build)
 export ICE_HOME=/usr (For RPM installation)
 ```
 
 On Windows:
 
 ```
-set ICE_HOME=C:\Program Files\ZeroC\Ice-3.7.5 (MSI installation)
+set ICE_HOME=C:\Program Files\ZeroC\Ice-3.8.0 (MSI installation)
 ```
 
 On Windows if you are using Ice for C++ from a source distribution, you must set
@@ -128,14 +128,14 @@ gradlew install
 The installation installs the following JAR files to `<prefix>/lib`.
 
 ```
-glacier2-compat-3.7.5.jar
-ice-compat-3.7.5.jar
-icebox-compat-3.7.5.jar
-icebt-compat-3.7.5.jar
-icediscovery-compat-3.7.5.jar
-icegrid-compat-3.7.5.jar
-icelocatordiscovery-compat-3.7.5.jar
-icestorm-compat-3.7.5.jar
+glacier2-compat-3.8a0.jar
+ice-compat-3.8a0.jar
+icebox-compat-3.8a0.jar
+icebt-compat-3.8a0.jar
+icediscovery-compat-3.8a0.jar
+icegrid-compat-3.8a0.jar
+icelocatordiscovery-compat-3.8a0.jar
+icestorm-compat-3.8a0.jar
 ```
 
 POM files are also installed for ease of deployment to a Maven-based
@@ -149,14 +149,14 @@ then you must set the `ICE_HOME` environment variable with the path name of your
 Ice installation. On Linux or macOS:
 
 ```
-export ICE_HOME=/opt/Ice-3.7.5 (For local build)
+export ICE_HOME=/opt/Ice-3.8.0 (For local build)
 export ICE_HOME=/usr (For RPM installation)
 ```
 
 On Windows:
 
 ```
-set ICE_HOME=C:\Program Files\ZeroC\Ice-3.7.5
+set ICE_HOME=C:\Program Files\ZeroC\Ice-3.8.0
 ```
 
 Python is required to run the test suite. To run the tests, open a command
@@ -256,6 +256,6 @@ To run the tests against a `controller` application started from Android
 Studio you should omit the `--controller-app` option from the commands above.
 
 [1]: https://zeroc.com/downloads/ice
-[2]: https://doc.zeroc.com/ice/3.7/release-notes/supported-platforms-for-ice-3-7-5
+[2]: https://doc.zeroc.com/ice/3.7/release-notes/supported-platforms-for-ice-3-8-0
 [3]: https://gradle.org
 [4]: https://commons.apache.org/proper/commons-compress/
