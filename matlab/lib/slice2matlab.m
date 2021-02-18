@@ -32,7 +32,7 @@ function status = slice2matlab(args)
     path = findFile({'..\slice2matlab.exe'
                      '..\..\cpp\bin\x64\Release\slice2matlab.exe'
                      '..\..\cpp\bin\x64\Debug\slice2matlab.exe'
-                     '..\msbuild\packages\zeroc.ice.v140\build\native\tools\slice2matlab.exe'}, rootDir, 2);
+                     '..\msbuild\packages\zeroc.ice.v141\build\native\tools\slice2matlab.exe'}, rootDir, 2);
 
     searchPath = findFile({'..\slice' '..\..\slice'}, rootDir, 7);
     out = '';
