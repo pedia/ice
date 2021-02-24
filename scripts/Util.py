@@ -3187,8 +3187,8 @@ class CppMapping(Mapping):
         def __init__(self, options=[]):
             Mapping.Config.__init__(self, options)
 
-            # if self.buildConfig == platform.getDefaultBuildConfig():
-            #     self.buildConfig = "cpp98-shared"
+            if self.buildConfig == platform.getDefaultBuildConfig():
+                self.buildConfig = "cpp98-shared"
 
             # Derive from the build config the cpp11 option. This is used by canRun to allow filtering
             # tests on the cpp11 value in the testcase options specification

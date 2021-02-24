@@ -515,7 +515,7 @@ namespace Ice
         /// <returns>The Ice version.</returns>
         public static string stringVersion()
         {
-            return "3.8.0-alpha.0"; // "A.B.C", with A=major, B=minor, C=patch
+            return "3.8.0"; // "A.B.C", with A=major, B=minor, C=patch
         }
 
         /// <summary>

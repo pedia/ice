@@ -103,7 +103,7 @@ Ice.currentEncoding = function()
 
 Ice.stringVersion = function()
 {
-    return "3.8.0-alpha.0"; // "A.B.C", with A=major, B=minor, C=patch
+    return "3.8.0"; // "A.B.C", with A=major, B=minor, C=patch
 };
 
 Ice.intVersion = function()

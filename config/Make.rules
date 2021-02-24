@@ -100,7 +100,7 @@ supported-languages     ?= $(strip cpp java java-compat python ruby php \
                                    $(if $(filter %/node,$(nodejs)),js) \
                                    $(if $(filter %/dotnet,$(dotnet)),csharp) \
                                    $(if $(filter Darwin,$(os)),objective-c swift))
-supported-configs       ?= shared
+supported-configs       ?= cpp98-shared
 
 version                 = 3.8.0
 mmversion               = 3.8

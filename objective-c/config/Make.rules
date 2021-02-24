@@ -17,11 +17,16 @@ endif
 
 ifneq ($(filter arc-%,$(CONFIGS)),)
 # Make sure that the non-ARC configuration is also enabled
-override CONFIGS := $(call unique,$(CONFIGS) $(patsubst arc-%,%,$(CONFIGS)))
+override CONFIGS := $(call unique,$(CONFIGS) $(patsubst arc-%,cpp98-%,$(CONFIGS)))
 endif
 
 # Validate platforms and configs
 $(eval $(call validate-config))
+
+#
+# Projects which are built with C++98
+#
+cpp98_projects	= %
 
 #
 # Build only few components with the static configuration (libraries)
