@@ -24,11 +24,6 @@ endif
 $(eval $(call validate-config))
 
 #
-# Projects which are built with C++98
-#
-cpp98_projects	= %
-
-#
 # Build only few components with the static configuration (libraries)
 #
 static_components       = Ice IceSSL IceIAP IceObjC IceSSLObjC IceIAPObjC Glacier2ObjC IceStormObjC IceGridObjC
