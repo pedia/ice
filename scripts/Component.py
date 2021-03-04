@@ -146,9 +146,9 @@ class Ice(Component):
                     return False
 
         # No C++98 tests for IceBridge, IceGrid, IceStorm and Glacier2
-        if isinstance(mapping, CppMapping) and not current.config.cpp11:
-            if parent in ["IceBridge", "IceGrid", "IceStorm", "Glacier2"]:
-                return False
+        cpp11 = current.driver.configs[Mapping.getByName("cpp")].cpp11
+        if parent in ["IceBridge", "IceGrid", "IceStorm", "Glacier2"] and not cpp11:
+            return False
 
         if current.config.xamarin and not current.config.uwp:
             #
