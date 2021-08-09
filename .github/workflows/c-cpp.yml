@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -21,3 +20,9 @@ jobs:
       
     - name: make
       run: OPTIMIZE=yes make CONFIGS=cpp11-shared V=1
+      
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install
+      run: cd cpp; python allTests.py
