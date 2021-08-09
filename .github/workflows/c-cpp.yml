@@ -1,0 +1,17 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ 3.7 ]
+  pull_request:
+    branches: [ 3.7 ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: make
+      run: OPTIMIZE=yes make CONFIGS=cpp11-shared V=1
