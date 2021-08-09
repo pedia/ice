@@ -15,8 +15,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: install
       run: >
-        apt update
-        apt-get install -y dpkg-dev gcc g++ git make libbz2-dev libssl-dev
+        apt update &&
+        apt-get install -y dpkg-dev gcc g++ git make libbz2-dev libssl-dev &&
         apt-get install -y liblmdb-dev libmcpp-dev
       
     - name: make
